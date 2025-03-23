@@ -96,13 +96,15 @@ cp .env.example .env
 ## 🚀 Usage
 
 ```python
-from banking_assistant import BankingAssistant
 
-# Initialize assistant
-assistant = BankingAssistant()
+print(final_guardrails_chain.invoke({
+    "question": "How can I apply for a loan?",
+    "chat_history": [
+        {"role": "user", "content": "How to check my bank balance?"}, 
+        {"role": "assistant", "content": "To check your account balance, you can log in to the online banking portal or use the mobile banking app."}
+    ]
+}))
 
-# Process query
-response = assistant.process_query("How do I check my balance?")
 ```
 
 ## ⚙️ Configuration
